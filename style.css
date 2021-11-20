@@ -56,3 +56,39 @@ body{
     width: 282px;
     background-color: antiquewhite;
 }
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0,0,0); /* Цвет запасной вариант */
+    background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+    border-radius: 0px;
+}
+.modal-content {
+background-color: #F2C9E0;
+margin: 15% auto; /* 15% сверху и по центру */
+padding: 20px;
+border: 1px solid #888;
+width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+border-radius: 10px;
+}
+  
+  /* Кнопка закрытия */
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}

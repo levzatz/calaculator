@@ -5,6 +5,7 @@ btn4=document.getElementById("4"),
 btn5=document.getElementById("5"),
 btn6=document.getElementById("6"),
 btn7=document.getElementById("7"),
+modal = document.getElementById("myModal"),
 btn8=document.getElementById("8"),
 btn9=document.getElementById("9"),
 btn0=document.getElementById("0"),
@@ -17,6 +18,8 @@ btnEqual=document.getElementById("="),
 btnDelete=document.getElementById("delete"),
 btnClear=document.getElementById("clear"),
 btnRoot=document.querySelector("#sqr"),
+btnInfo=document.querySelector("#info"),
+span = document.querySelector("#close"),
 inp=document.querySelectorAll('div')[2],
 outputDiv=document.getElementById('output'),
 answer,//тут хранится результат вычисления
@@ -281,7 +284,7 @@ function addDot(){
 }
 function clear(){
     inp.innerText='';
-    
+    equalCount=0;
     outputDiv.innerText='';
     first='';
     second='';
@@ -366,5 +369,12 @@ document.addEventListener('keydown',(e)=>{
         break;
         
     }
+});
+btnInfo.addEventListener('click',()=>{
+    modal.style.display = "block";
+});
+span.addEventListener('click',()=>{
+   modal.style.display = "none";
+      
 });
 
